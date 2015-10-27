@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Antlr 3.4.1.9004" Category="Package" Bounds="70.205,279.8,102.053333333333,25.96" Label="Antlr 3.4.1.9004" />
+    <Node Id="EntityFramework 6.1.3" Category="Package" Bounds="48.1533333333333,447.68,136.196666666667,25.96" Label="EntityFramework 6.1.3" />
+    <Node Id="EntityFramework.SqlServerCompact 6.1.3" Category="Package" Bounds="211.386666666667,391.72,235.73,25.96" Label="EntityFramework.SqlServerCompact 6.1.3" />
+    <Node Id="Microsoft.AspNet.Mvc 5.0.0" Category="Package" Bounds="448.858333333333,111.92,164.746666666667,25.96" Label="Microsoft.AspNet.Mvc 5.0.0" />
+    <Node Id="Microsoft.AspNet.Razor 3.0.0" Category="Package" Bounds="444.935,223.84,172.593333333333,25.96" Label="Microsoft.AspNet.Razor 3.0.0" />
+    <Node Id="Microsoft.AspNet.Web.Optimization 1.1.1" Category="Package" Bounds="1.4210854715202E-14,167.88,238.463333333333,25.96" Label="Microsoft.AspNet.Web.Optimization 1.1.1" />
+    <Node Id="Microsoft.AspNet.WebApi 5.0.0" Category="Package" Bounds="926.771666666667,55.9599999999999,184.92,25.96" Label="Microsoft.AspNet.WebApi 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package" Bounds="648.283333333333,223.84,217.896666666667,25.96" Label="Microsoft.AspNet.WebApi.Client 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package" Bounds="687.016666666667,167.88,212.43,25.96" Label="Microsoft.AspNet.WebApi.Core 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.HelpPage 5.0.0" Category="Package" Bounds="525.008333333333,55.9599999999999,238.446666666667,25.96" Label="Microsoft.AspNet.WebApi.HelpPage 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.0.0" Category="Package" Bounds="674.846666666667,111.92,236.77,25.96" Label="Microsoft.AspNet.WebApi.WebHost 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebPages 3.0.0" Category="Package" Bounds="301.99,167.88,198.483333333333,25.96" Label="Microsoft.AspNet.WebPages 3.0.0" />
+    <Node Id="Microsoft.SqlServer.Compact 4.0.8876.1" Category="Package" Bounds="280.351814821412,482.389718070706,228.886666666667,25.96" Label="Microsoft.SqlServer.Compact 4.0.8876.1" UseManualLocation="True" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" Bounds="206.193333333333,223.84,208.076666666667,25.96" Label="Microsoft.Web.Infrastructure 1.0.0.0" />
+    <Node Id="Modernizr 2.6.2" Category="Package" Bounds="793.973333333333,55.9599999999999,102.516666666667,25.96" Label="Modernizr 2.6.2" />
+    <Node Id="Newtonsoft.Json 5.0.6" Category="Package" Bounds="202.505,279.8,135.453333333333,25.96" Label="Newtonsoft.Json 5.0.6" />
+    <Node Id="Respond 1.2.0" Category="Package" Bounds="400.04,55.96,94.3833333333333,25.96" Label="Respond 1.2.0" />
+    <Node Id="WebGrease 1.5.2" Category="Package" Bounds="66.9333333333334,223.84,108.596666666667,25.96" Label="WebGrease 1.5.2" />
+    <Node Id="bootstrap 3.0.0" Category="Package" Bounds="270.446666666667,55.96,99.57,25.96" Label="bootstrap 3.0.0" />
+    <Node Id="eForm.Data.SqlServerCompact" Category="Project" Bounds="-22.0856308776249,356.642821547302,180.503333333333,25.96" Label="eForm.Data.SqlServerCompact" UseManualLocation="True" />
+    <Node Id="eForm.WebApi" Category="Project" Bounds="270.973333333333,0,98.5166666666667,25.96" Label="eForm.WebApi" />
+    <Node Id="eForm.Win" Category="Project" Bounds="290.66,335.76,77.1833333333333,25.96" Label="eForm.Win" />
+    <Node Id="jQuery 1.10.2" Category="Package" Bounds="150.548333333333,55.96,89.3666666666667,25.96" Label="jQuery 1.10.2" />
+  </Nodes>
+  <Links>
+    <Link Source="EntityFramework.SqlServerCompact 6.1.3" Target="EntityFramework 6.1.3" Category="Package Dependency" Bounds="174.361828767326,417.680286834717,105.484283024303,27.7131970592" />
+    <Link Source="EntityFramework.SqlServerCompact 6.1.3" Target="Microsoft.SqlServer.Compact 4.0.8876.1" Category="Package Dependency" Bounds="338.6346746125,417.679996948242,41.5048943184799,57.4158916661289" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" Bounds="531.231689453125,137.880004882813,0,76.9599914550781" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.WebPages 3.0.0" Category="Package Dependency" Bounds="439.651977539063,137.880004882813,61.4259948730469,26.4415283203125" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.1" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" Bounds="163.534378051758,193.839996337891,93.7576446533203,27.4695129394531" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.1" Target="WebGrease 1.5.2" Category="Package Dependency" Bounds="119.695571899414,193.839996337891,0.750740051269531,21.0057525634766" />
+    <Link Source="Microsoft.AspNet.WebApi 5.0.0" Target="Microsoft.AspNet.WebApi.WebHost 5.0.0" Category="Package Dependency" Bounds="854.388854980469,81.9199981689453,112.421813964844,27.8368301391602" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.0.0" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" Bounds="346.899505615234,249.200958251953,302.585113525391,34.7693176269531" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.0.0" Target="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package Dependency" Bounds="770.451171875,193.839996337891,14.4302368164063,22.4309844970703" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.0.0" Target="Microsoft.AspNet.Mvc 5.0.0" Category="Package Dependency" Bounds="565.507385253906,81.9199981689453,52.5137939453125,26.0059432983398" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" Bounds="565.507385253906,81.9199981689453,78.7243041992188,137.92594909668" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.0.0" Target="Microsoft.AspNet.WebApi.WebHost 5.0.0" Category="Package Dependency" Bounds="678.792419433594,81.9199981689453,71.453125,26.8356781005859" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.0.0" Target="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package Dependency" Bounds="793.231689453125,137.880004882813,0,21" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" Bounds="431.385345458984,193.839996337891,61.4259948730469,26.4415283203125" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" Bounds="339.005676269531,193.839996337891,41.118408203125,25.2855682373047" />
+    <Link Source="WebGrease 1.5.2" Target="Antlr 3.4.1.9004" Category="Package Dependency" Bounds="121.231666564941,249.800003051758,0,20.9999847412109" />
+    <Link Source="WebGrease 1.5.2" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" Bounds="155.792419433594,249.800003051758,71.4531097412109,26.8356781005859" />
+    <Link Source="eForm.Data.SqlServerCompact" Target="EntityFramework 6.1.3" Category="Installed Package" Bounds="75.0220098408757,382.602817993164,30.1702535023044,57.1194788351128" />
+    <Link Source="eForm.WebApi" Target="Microsoft.AspNet.Web.Optimization 1.1.1" Category="Installed Package" Bounds="119.231666564941,23.5907211303711,151.808708190918,135.289283752441" />
+    <Link Source="eForm.WebApi" Target="Microsoft.AspNet.WebApi 5.0.0" Category="Installed Package" Bounds="369.489990234375,16.2086391448975,550.057434082031,39.1097202301025" />
+    <Link Source="eForm.WebApi" Target="Microsoft.AspNet.WebApi.HelpPage 5.0.0" Category="Installed Package" Bounds="369.489990234375,21.4877052307129,190.720703125,32.9405288696289" />
+    <Link Source="eForm.WebApi" Target="Modernizr 2.6.2" Category="Installed Package" Bounds="369.489990234375,17.0533313751221,416.145263671875,38.7187938690186" />
+    <Link Source="eForm.WebApi" Target="Respond 1.2.0" Category="Installed Package" Bounds="349.689483642578,25.9599990844727,59.8484191894531,26.3710060119629" />
+    <Link Source="eForm.WebApi" Target="bootstrap 3.0.0" Category="Installed Package" Bounds="320.231658935547,25.9599990844727,0,21" />
+    <Link Source="eForm.WebApi" Target="jQuery 1.10.2" Category="Installed Package" Bounds="232.440002441406,25.9599990844727,58.7977294921875,26.3225746154785" />
+    <Link Source="eForm.Win" Target="EntityFramework.SqlServerCompact 6.1.3" Category="Installed Package" Bounds="329.251664977653,361.720186834717,2.86307647456852E-06,21.0001" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

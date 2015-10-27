@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F2FB076-75B7-49D0-BB72-801F2B7270D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eForm.Win</RootNamespace>
+    <AssemblyName>eForm.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://ftp.safa.com.my/eForm/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://eform.fakhrul.my/</InstallUrl>
+    <ProductName>eForm</ProductName>
+    <PublisherName>TM</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1EA0B7A90FB50FC43B0D2AD1191DFCF49364E29D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>eForm.Win_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BiometricNET, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\BiometricNET.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Common, Version=0.1.0.0, Culture=neutral, PublicKeyToken=c3c25e41a6abca42, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Guifreaks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.NavigationBar, Version=0.1.0.0, Culture=neutral, PublicKeyToken=bf0afd6b35ed9434, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Guifreaks.NavigationBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.NavigationBar.XmlSerializers, Version=0.1.0.0, Culture=neutral, PublicKeyToken=bf0afd6b35ed9434, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Guifreaks.NavigationBar.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant.cs" />
+    <Compile Include="Enum\FpReturn.cs" />
+    <Compile Include="EventArgs\ButtonClickEventArgs.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ApplicationUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicationUpdateForm.Designer.cs">
+      <DependentUpon>ApplicationUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeviceRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceRegistrationForm.Designer.cs">
+      <DependentUpon>DeviceRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeviceRegistrationProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceRegistrationProcessingForm.Designer.cs">
+      <DependentUpon>DeviceRegistrationProcessingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerify2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyPerformanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyPerformanceForm.Designer.cs">
+      <DependentUpon>MyPerformanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProcessingForm.Designer.cs">
+      <DependentUpon>ProcessingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LocalAuthSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalAuthSetupForm.Designer.cs">
+      <DependentUpon>LocalAuthSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginFormAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginFormAgent.Designer.cs">
+      <DependentUpon>LoginFormAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main2Form.Designer.cs">
+      <DependentUpon>Main2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainProcessForm.Designer.cs">
+      <DependentUpon>MainProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyKadVerifcationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyKadVerifcationForm.Designer.cs">
+      <DependentUpon>MyKadVerifcationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReadingMyKadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReadingMyKadForm.Designer.cs">
+      <DependentUpon>ReadingMyKadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistrationSlipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistrationSlipForm.Designer.cs">
+      <DependentUpon>RegistrationSlipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SoftwareType.cs" />
+    <Compile Include="Forms\TermAndConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TermAndConditionForm.Designer.cs">
+      <DependentUpon>TermAndConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VerifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VerifyForm.designer.cs">
+      <DependentUpon>VerifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WebApiTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WebApiTestForm.Designer.cs">
+      <DependentUpon>WebApiTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDescribableEntity.cs" />
+    <Compile Include="MyKad_SDK.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ConnectionService.cs" />
+    <Compile Include="Services\HttpClient.cs" />
+    <Compile Include="Services\IWebApiService.cs" />
+    <Compile Include="Services\MyKadService.cs" />
+    <Compile Include="Services\WebApiService.cs" />
+    <Compile Include="UserControls\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BaseUserControl.Designer.cs">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiOtherslPlanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiOtherslPlanUC.Designer.cs">
+      <DependentUpon>UnifiOtherslPlanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiHyppTVPlanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiHyppTVPlanUC.Designer.cs">
+      <DependentUpon>UnifiHyppTVPlanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiCallPlanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiCallPlanUC.Designer.cs">
+      <DependentUpon>UnifiCallPlanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiMainDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\UnifiMainDetailsUC.Designer.cs">
+      <DependentUpon>UnifiMainDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\BillingDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\BillingDetailsUC.Designer.cs">
+      <DependentUpon>BillingDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\InstallationDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\InstallationDetailsUC.Designer.cs">
+      <DependentUpon>InstallationDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\ApplicantDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\ApplicantDetailsUC.Designer.cs">
+      <DependentUpon>ApplicantDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\ApplicationGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\ApplicationGroup.Designer.cs">
+      <DependentUpon>ApplicationGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BusinessApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BusinessApplicationUC.Designer.cs">
+      <DependentUpon>BusinessApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\DashboardUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\DashboardUC.Designer.cs">
+      <DependentUpon>DashboardUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\DocumentUploadUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\DocumentUploadUC.Designer.cs">
+      <DependentUpon>DocumentUploadUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\EndUserTypeSegment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\EndUserTypeSegment.Designer.cs">
+      <DependentUpon>EndUserTypeSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\IncompletApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\IncompletApplicationUC.Designer.cs">
+      <DependentUpon>IncompletApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\IncompleteApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\IncompleteApplicationUC.Designer.cs">
+      <DependentUpon>IncompleteApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InstallationAndBillingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\InstallationAndBillingUC.Designer.cs">
+      <DependentUpon>InstallationAndBillingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\LatestApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\LatestApplicationUC.Designer.cs">
+      <DependentUpon>LatestApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\LatestRegistrationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\LatestRegistrationUC.Designer.cs">
+      <DependentUpon>LatestRegistrationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\ApplicantTypeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\ApplicantTypeUC.Designer.cs">
+      <DependentUpon>ApplicantTypeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\ProductGroupUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\ProductGroupUC.Designer.cs">
+      <DependentUpon>ProductGroupUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyKadReaderStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyKadReaderStatus.Designer.cs">
+      <DependentUpon>MyKadReaderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductSalesSegment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductSalesSegment.Designer.cs">
+      <DependentUpon>ProductSalesSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\RecentApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\RecentApplicationUC.Designer.cs">
+      <DependentUpon>RecentApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegistrationToday.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegistrationToday.Designer.cs">
+      <DependentUpon>RegistrationToday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResidentialApplicationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResidentialApplicationUC.Designer.cs">
+      <DependentUpon>ResidentialApplicationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResidentialApplicationUCold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResidentialApplicationUCold.Designer.cs">
+      <DependentUpon>ResidentialApplicationUCold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AuthenticateServiceTest.cs" />
+    <Compile Include="Services\IAuthenticateService.cs" />
+    <Compile Include="UserControls\ResidentialTerminationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResidentialTerminationUC.Designer.cs">
+      <DependentUpon>ResidentialTerminationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResidentialTerminationUCold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResidentialTerminationUCold.Designer.cs">
+      <DependentUpon>ResidentialTerminationUCold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalesSummaryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SalesSummaryUC.Designer.cs">
+      <DependentUpon>SalesSummaryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SelectionButtonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelectionButtonUC.Designer.cs">
+      <DependentUpon>SelectionButtonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ServiceDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ServiceDetailsUC.Designer.cs">
+      <DependentUpon>ServiceDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Main\TermAndConditionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Main\TermAndConditionUC.Designer.cs">
+      <DependentUpon>TermAndConditionUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Component\BottomBarUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Component\BottomBarUC.Designer.cs">
+      <DependentUpon>BottomBarUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TitleBarUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TitleBarUC.Designer.cs">
+      <DependentUpon>TitleBarUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ApplicationUpdateForm.resx">
+      <DependentUpon>ApplicationUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeviceRegistrationForm.resx">
+      <DependentUpon>DeviceRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeviceRegistrationProcessingForm.resx">
+      <DependentUpon>DeviceRegistrationProcessingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerify2.resx">
+      <DependentUpon>frmVerify2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyPerformanceForm.resx">
+      <DependentUpon>MyPerformanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProcessingForm.resx">
+      <DependentUpon>ProcessingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalAuthSetupForm.resx">
+      <DependentUpon>LocalAuthSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginFormAgent.resx">
+      <DependentUpon>LoginFormAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main2Form.resx">
+      <DependentUpon>Main2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainProcessForm.resx">
+      <DependentUpon>MainProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyKadVerifcationForm.resx">
+      <DependentUpon>MyKadVerifcationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReadingMyKadForm.resx">
+      <DependentUpon>ReadingMyKadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistrationSlipForm.resx">
+      <DependentUpon>RegistrationSlipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VerifyForm.resx">
+      <DependentUpon>VerifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WebApiTestForm.resx">
+      <DependentUpon>WebApiTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TermAndConditionForm.resx">
+      <DependentUpon>TermAndConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Main\UnifiOtherslPlanUC.resx">
+      <DependentUpon>UnifiOtherslPlanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\UnifiHyppTVPlanUC.resx">
+      <DependentUpon>UnifiHyppTVPlanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\UnifiCallPlanUC.resx">
+      <DependentUpon>UnifiCallPlanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\UnifiMainDetailsUC.resx">
+      <DependentUpon>UnifiMainDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\BillingDetailsUC.resx">
+      <DependentUpon>BillingDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\InstallationDetailsUC.resx">
+      <DependentUpon>InstallationDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\ApplicantDetailsUC.resx">
+      <DependentUpon>ApplicantDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\ApplicationGroup.resx">
+      <DependentUpon>ApplicationGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BusinessApplicationUC.resx">
+      <DependentUpon>BusinessApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\DashboardUC.resx">
+      <DependentUpon>DashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\DocumentUploadUC.resx">
+      <DependentUpon>DocumentUploadUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\EndUserTypeSegment.resx">
+      <DependentUpon>EndUserTypeSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\IncompletApplicationUC.resx">
+      <DependentUpon>IncompletApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\IncompleteApplicationUC.resx">
+      <DependentUpon>IncompleteApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\InstallationAndBillingUC.resx">
+      <DependentUpon>InstallationAndBillingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\LatestApplicationUC.resx">
+      <DependentUpon>LatestApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\LatestRegistrationUC.resx">
+      <DependentUpon>LatestRegistrationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\ApplicantTypeUC.resx">
+      <DependentUpon>ApplicantTypeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\ProductGroupUC.resx">
+      <DependentUpon>ProductGroupUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyKadReaderStatus.resx">
+      <DependentUpon>MyKadReaderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductSalesSegment.resx">
+      <DependentUpon>ProductSalesSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\RecentApplicationUC.resx">
+      <DependentUpon>RecentApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RegistrationToday.resx">
+      <DependentUpon>RegistrationToday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResidentialApplicationUC.resx">
+      <DependentUpon>ResidentialApplicationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResidentialApplicationUCold.resx">
+      <DependentUpon>ResidentialApplicationUCold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResidentialTerminationUC.resx">
+      <DependentUpon>ResidentialTerminationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResidentialTerminationUCold.resx">
+      <DependentUpon>ResidentialTerminationUCold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SalesSummaryUC.resx">
+      <DependentUpon>SalesSummaryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SelectionButtonUC.resx">
+      <DependentUpon>SelectionButtonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ServiceDetailsUC.resx">
+      <DependentUpon>ServiceDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Main\TermAndConditionUC.resx">
+      <DependentUpon>TermAndConditionUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Component\BottomBarUC.resx">
+      <DependentUpon>BottomBarUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TitleBarUC.resx">
+      <DependentUpon>TitleBarUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="AMD64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="eForm.Win_TemporaryKey.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\eForm.Win.Data.ProfileInfo.datasource" />
+    <None Include="Properties\DataSources\eForm.Win.Data.Transaction.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="EntityFramework.SqlServerCompact.dll" />
+    <Content Include="x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AMD64\Microsoft.VC90.CRT\msvcr90.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\Microsoft.VC90.CRT\README_ENU.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceca35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceca40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlcecompact35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlcecompact40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceer35EN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceer40EN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceme35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceme40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceoledb35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceqp35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlceqp40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlcese35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMD64\sqlcese40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\search.png" />
+    <Content Include="Images\switch-off.png" />
+    <Content Include="Images\switch-on.png" />
+    <Content Include="Images\window-layout.png" />
+    <Content Include="System.Data.SqlServerCe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Data.SqlServerCe.Entity.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\Microsoft.VC90.CRT\msvcr90.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\Microsoft.VC90.CRT\README_ENU.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceca35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceca40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcecompact35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcecompact40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceer35EN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceer40EN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceme35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceme40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceoledb35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceqp35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceqp40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcese35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcese40.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="BiometricLIB.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BiometricNET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="gsdkpcsc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Guifreaks.Common.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Guifreaks.NavigationBar.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Guifreaks.NavigationBar.XmlSerializers.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ImageCompress.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\exit.png" />
+    <None Include="Images\lightbulb24.png" />
+    <None Include="Images\empty_profile.png" />
+    <None Include="Images\end_user_term.png" />
+    <Content Include="eForm.Win.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\house.png" />
+    <Content Include="Images\logo_tm.png" />
+    <None Include="Images\screen80.png" />
+    <None Include="Images\servers1.png" />
+    <None Include="Images\smartphone54.png" />
+    <Content Include="Images\sign-left.png" />
+    <Content Include="Images\sign-right.png" />
+    <Content Include="Images\touch-screen-phone1.png" />
+    <None Include="inteluhd2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libeay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MFC71.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MorphoCBM.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MORPHO_SDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MORPHO_SDK_IMAGE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MSO100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MSOSECU.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MSO_Sprs232.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MSO_SpUsb.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MSVCP71.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="msvcp90.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="msvcr71.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="msvcr90.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PowerControlLIB.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PowerControlNET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="samlicense.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\eForm.Data.SqlServerCompact\Source\eForm.Data.SqlServerCompact\eForm.Data.SqlServerCompact.csproj">
+      <Project>{5af9de55-ee3f-4a1f-8aab-13076fd32f9a}</Project>
+      <Name>eForm.Data.SqlServerCompact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eForm.Data\Source\eForm.Data\eForm.Data.csproj">
+      <Project>{c0e85339-32d7-41c4-ad98-29e3485e5dcf}</Project>
+      <Name>eForm.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eForm.Services\eForm.Services.csproj">
+      <Project>{53e4b27f-2852-4bc8-b474-ed25c3f59cf6}</Project>
+      <Name>eForm.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eForm.Models\eForm.Models.csproj">
+      <Project>{c95c9ba2-5296-4f2e-ba89-06ad7d47b827}</Project>
+      <Name>eForm.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
